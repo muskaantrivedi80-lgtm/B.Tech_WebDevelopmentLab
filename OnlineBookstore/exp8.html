@@ -1,118 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>CSS Styling and Background Images Demo</title>
-    <style>
-        /* ==========================================
-           REQUIREMENT 2 PART A: Page Background Image
-           ========================================== */
-        body {
-            /* Sets a background image for the entire web page */
-            background-image: url('page-background.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
-            
-            /* REQUIREMENT 1: Default Font and Global Styles */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333333;
-            margin: 0;
-            padding: 40px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Basic CSS Styling</title>
 
-        /* Container to center and wrap content neatly */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white card background */
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
+<style>
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333333;
+    margin: 0;
+    background-color: #ffffff;
+  }
 
-        /* ==========================================
-           REQUIREMENT 1: Different Fonts & Styles
-           ========================================== */
-        
-        /* Main Heading Style */
-        h1 {
-            font-family: 'Georgia', serif;
-            color: #2c3e50;
-            font-size: 2.5rem;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
 
-        /* Subtitle Style */
-        .subtitle {
-            font-family: 'Courier New', Courier, monospace;
-            color: #7f8c8d;
-            font-size: 1.1rem;
-            text-align: center;
-            margin-bottom: 30px;
-        }
+  h1 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    color: #ffffff;
+    margin: 0;
+  }
 
-        /* Paragraph Text Style */
-        p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #444444;
-        }
+  h2 {
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    color: #1a4f8b;
+  }
 
-        /* Custom style classes for varied text styling */
-        .highlight-text {
-            font-family: 'Lucida Console', Monaco, monospace;
-            color: #e74c3c;
-            font-weight: bold;
-        }
+ 
+  #banner {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: linear-gradient(135deg, #1a4f8b, #4a90d9);
+  }
 
-        /* ==========================================
-           REQUIREMENT 2 PART B: Single Element Background Image
-           ========================================== */
-        .featured-banner {
-            /* Sets a specific background image for this individual element only */
-            background-image: url('element-background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #ffffff; /* White text for contrast */
-            padding: 40px;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 25px;
-            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
-        }
+ 
+  .content {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
 
-        .featured-banner h2 {
-            font-family: 'Trebuchet MS', sans-serif;
-            font-size: 1.8rem;
-            margin-top: 0;
-            color: #f1c40f;
-        }
-    </style>
+  .red-bold {
+    color: #c0392b;
+    font-weight: bold;
+  }
+
+  .code-font {
+    font-family: "Courier New", monospace;
+    background-color: #fff3b0;
+    padding: 2px 6px;
+  }
+
+  .box {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ccircle cx='75' cy='75' r='45' fill='%23cfe2f5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    border: 2px solid #1a4f8b;
+    border-radius: 10px;
+    padding: 15px 20px 40px;
+  }
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        <!-- Heading using a distinct serif font and uppercase style -->
-        <h1>Welcome to My Styled Page</h1>
-        <div class="subtitle">// Demonstrating CSS Selectors, Fonts, and Backgrounds</div>
+  <div id="banner">
+    <h1>My First CSS Page</h1>
+  </div>
 
-        <p>
-            In Cascading Style Sheets (CSS), selectors are used to target HTML elements and define how they should look. By defining styles in the <span class="highlight-text">&lt;style&gt;</span> section, we can cleanly separate design from content across the entire document.
-        </p>
+  <div class="content">
+    <h2>Different fonts and styles</h2>
+    <p>
+      This text uses the body font. This is <span class="red-bold">red and bold</span>,
+      and this is <span class="code-font">a monospace font</span>.
+    </p>
 
-        <!-- Single element styled with its own unique background image -->
-        <div class="featured-banner">
-            <h2>Single Element Background Image</h2>
-            <p style="color: #ffffff;">
-                This specific box has its own background image applied via CSS, independent of the main page background!
-            </p>
-        </div>
+    <h2>Background images</h2>
+    <p>The banner has a gradient image, and the box below has its own image in the corner.</p>
+
+    <div class="box">
+      <p>This box has a background image placed at the bottom right.</p>
     </div>
+  </div>
 
 </body>
 </html>
